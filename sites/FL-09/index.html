@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <title>Hurricane Helper | Nissi Sanju</title>
 
@@ -39,16 +40,28 @@
 
     .hero {
       height: 90vh;
-      background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Dramatic_Views_of_Hurricane_Florence_from_the_International_Space_Station_From_9_12_%2842828603210%29_%28cropped%29.jpg");
+      /*background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Dramatic_Views_of_Hurricane_Florence_from_the_International_Space_Station_From_9_12_%2842828603210%29_%28cropped%29.jpg");*/
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://upload.wikimedia.org/wikipedia/commons/3/35/Dramatic_Views_of_Hurricane_Florence_from_the_International_Space_Station_From_9_12_%2842828603210%29_%28cropped%29.jpg");
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: opacity 0.2s linear;
       text-align: center;
-      color: #203a55;
-      text-shadow: 0px 2px 12px;
+      color: #cdd7e4;
+      /*text-shadow: 0px 2px 12px;*/
       font-size: 3vw;
+    }
+
+    .hero-district {
+      font-family: 'Karla', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--water-light);
+      margin-bottom: 1rem;
     }
     
 
@@ -80,18 +93,19 @@
     footer a { color: var(--cac-red); }
   </style>
 </head>
+
+
 <body>
   <!-- Back button — links to the main showcase -->
   <a href="../../" class="back-to-showcase">&larr; Back to Showcase</a>
 
 
   <img scr="https://upload.wikimedia.org/wikipedia/commons/3/35/Dramatic_Views_of_Hurricane_Florence_from_the_International_Space_Station_From_9_12_%2842828603210%29_%28cropped%29.jpg">
-  <div class="hero">
+  <div class="hero" data-aos="fade" id="hero">
     <div>
+      <p class="hero-district">2025 Congressional App Challenge Winner • FL-09 • Kissimmee, FL</p>
       <h1>Hurricane Helper</h1>
       <p>Made by: Nissi Sanju</p>
-      <p>2025 Congressional App Challenge Winner</p>
-      <p>FL-09</p>
     </div>
   </div>
 
@@ -103,7 +117,7 @@
       <!--<p>2025 Congressional App Challenge Winner</p>-->
     </header>
 
-    <section>
+    <section data-aos="fade-up">
       <!-- TODO: Tell us about yourself -->
       <h2>About Me</h2>
       <p>Hello! My name is Nissi and I'm a junior in Florida! I enjoy coding, reading, and learning new things!</p>
@@ -113,6 +127,18 @@
       <!-- TODO: Tell us about your app -->
       <h2>Hurricane Helper</h2>
       <p>Hurricane Helper is an iOS app that help users, especially Florida residents, with hurricane preparation. The first page features a to-do checklist where the user has a simple list of essential hurricane preparation tips which they can check on or off. The app also includes a Hurricane AI Chatbot designed to answer any questions about hurricanes preparedness, resources and safety. Then, there is the alerts tab where the user can get real time weather updates, through the National Weather Service's API, for all of Florida. Lastly, there is the shelter finder page where I compiled a list of evacuation shelters throughout Florida and put it in an interactive map that links directly to Apple Maps for easy navigation. </p>
+      <p>Swift, MapKit, National Weather Service API, Landbot AI chatbot</p>
+    </section>
+    
+     <section>
+      <!-- features -->
+      <h2>Features</h2>
+      <p>maybe make this like boxes</p>
+    </section>
+    
+    <section>
+      <!-- built with -->
+      <h2>Built With</h2>
       <p>Swift, MapKit, National Weather Service API, Landbot AI chatbot</p>
     </section>
 
@@ -153,5 +179,27 @@
 
   <!-- Navigation script — enables arrow key navigation. Do NOT remove this. -->
   <script src="../../assets/js/nav.js" data-root="../../"></script>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+window.addEventListener("scroll", () => {
+    const hero = document.getElementById("hero");
+    let scrollY = window.scrollY;
+
+    // adjust divisor to control fade speed
+    let opacity = 1 - scrollY / 800;
+
+    // prevent negative opacity
+    if (opacity < 0) opacity = 0;
+
+    hero.style.opacity = opacity;
+    hero.style.transform = `translateY(${scrollY * 0.1}px)`;
+});
+</script>
+
 </body>
 </html>
