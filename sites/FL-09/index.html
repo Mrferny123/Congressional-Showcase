@@ -40,7 +40,6 @@
 
     .hero {
       height: 90vh;
-      /*background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Dramatic_Views_of_Hurricane_Florence_from_the_International_Space_Station_From_9_12_%2842828603210%29_%28cropped%29.jpg");*/
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://upload.wikimedia.org/wikipedia/commons/3/35/Dramatic_Views_of_Hurricane_Florence_from_the_International_Space_Station_From_9_12_%2842828603210%29_%28cropped%29.jpg");
       background-size: cover;
       background-position: center;
@@ -72,7 +71,22 @@
       margin-bottom: 2rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
+    
+    .feature-section {
+        padding: 80px 20px;
+        text-align: center;
+    }
 
+    .features-section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .features-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
     /*h2 { font-size: 1.4rem; margin-bottom: 1rem; }*/
     /*p { line-height: 1.7; margin-bottom: 1rem; }*/
 
@@ -130,11 +144,27 @@
       <p>Swift, MapKit, National Weather Service API, Landbot AI chatbot</p>
     </section>
     
-     <section>
+    <!-- <section>-->
       <!-- features -->
-      <h2>Features</h2>
-      <p>maybe make this like boxes</p>
-    </section>
+    <!--  <h2>Features</h2>-->
+    <!--  <p></p>-->
+    <!--</section>-->
+    <div class="feature-section">
+        <h2>Features</h2>
+        <div class="feature-container">
+            <div class="feature-card">
+                <h3>Emergency Checklist</h3>
+                <p>Know exactly how to prepare with a clear list</p>
+            </div>
+        </div>
+        
+        <div class="feature-container">
+            <div class="feature-card">
+                <h3>Real Time Weather Alerts</h3>
+                <p>Stay updated with live hurricane warnings and alerts.</p>
+            </div>
+        </div>
+    </div>
     
     <section>
       <!-- built with -->
