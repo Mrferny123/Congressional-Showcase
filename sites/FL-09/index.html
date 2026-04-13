@@ -77,38 +77,34 @@
       text-align: center;
     }
 
-    .features-section h2 {
+    .feature-section h2 {
         font-size: 32px;
         margin-bottom: 40px;
     }
     
-    .features-container {
+    .feature-container {
         display: flex;
         justify-content: center;
+        align-items: stretch;
         gap: 30px;
+        flex-wrap: wrap; 
     }
     
-    /* Tech stack */
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 0.75rem;
-      margin-top: 0.5rem;
+    .feature-card {
+        background: #cdd7e3;
+        padding: 25px;
+        width: 250px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 40px;
     }
 
-    .tech-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1rem;
-      background: var(--cac-snow);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--cac-slate);
-      border: 1px solid var(--cac-smoke);
+    /* Hover effect */
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.2);
     }
-    
     /*h2 { font-size: 1.4rem; margin-bottom: 1rem; }*/
     /*p { line-height: 1.7; margin-bottom: 1rem; }*/
 
@@ -166,35 +162,33 @@
       <p>Swift, MapKit, National Weather Service API, Landbot AI chatbot</p>
     </section>
     
-    <!-- <section>-->
-    <!--   features -->
-    <!--  <h2>Features</h2>-->
-    <!--  <p></p>-->
-    <!--</section>-->
-    <!--<div class="feature-section">-->
-    <!--    <h2>Features</h2>-->
-    <!--    <div class="feature-container">-->
-    <!--        <div class="feature-card">-->
-    <!--            <h3>Emergency Checklist</h3>-->
-    <!--            <p>Know exactly how to prepare with a clear list</p>-->
-    <!--        </div>-->
-    <!--    </div>-->
-        
-    <!--    <div class="feature-container">-->
-    <!--        <div class="feature-card">-->
-    <!--            <h3>Real Time Weather Alerts</h3>-->
-    <!--            <p>Stay updated with live hurricane warnings and alerts.</p>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
+   <div class="feature-section">
     <h2>Features</h2>
-    <div class="tech-grid">
-        <div class="tech-item">React Native</div>
-        <div class="tech-item">Firebase</div>
-        <div class="tech-item">Node.js</div>
-        <div class="tech-item">Chart.js</div>
-     </div>
 
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <h3>Emergency Checklist</h3>
+            <p>Know exactly how to prepare with a clear list</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>AI Chatbot</h3>
+            <p>Trained on numerous hurricane preparedness websites.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Real Time Weather Alerts</h3>
+            <p>Stay updated with live hurricane warnings and alerts.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Shelter Map</h3>
+            <p>Interactive map with hurricane shelters pinned.</p>
+        </div>
+
+    </div>
+</div>
 
     <section>
       <!-- built with -->
