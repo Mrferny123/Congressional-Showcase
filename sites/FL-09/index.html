@@ -101,13 +101,14 @@
     }
     
     .feature-section {
-      padding: 80px 20px;
+      /*padding: 80px 20px;*/
       text-align: center;
     }
 
     .feature-section h2 {
         font-size: 32px;
         margin-bottom: 40px;
+        color: #333333;
     }
     
     .feature-container {
@@ -150,14 +151,11 @@
     }
     
     .tech-bubble {
-        background:  #cdd7e3;
-        color: #1B3A57;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        border-radius: 999px;
         padding: 10px 18px;
-        border-radius: 999px; /* makes it pill-shaped */
-        font-size: 14px;
-        font-weight: 500;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.3);
     }
 
 
@@ -166,6 +164,19 @@
       aspect-ratio: 16 / 9;
       border: none;
       border-radius: 8px;
+    }
+    
+    .links a {
+      text-decoration: none;
+      background: #1d2838;
+      color: #cdd7e4;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.2rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 10px rgba(62,44,14,0.25);
     }
 
     footer {
@@ -212,7 +223,7 @@
     <section data-aos="fade-up">
       <!-- TODO: Tell us about your app -->
       <h2>About the App</h2>
-      <p>Hurricanes are one thing, but actually preparing for one is something completely different. There is so much information out there on how to get ready and with the stress of a hurricane, it’s hard to keep track of everything to make sure you’re truly prepared. I’ve made this app to help alleviate some of the stress that comes with hurricanes. Hurricane Helper is an iOS app that help users, especially Florida residents, with hurricane preparation. </p>
+      <p>Hurricanes are one thing, but actually preparing for one is something completely different. There is so much information out there on how to get ready, and with the stress of a hurricane, it’s hard to keep track of everything to make sure you’re truly prepared. I’ve made this app to help alleviate some of the stress that comes with hurricanes. Hurricane Helper is an iOS app that help users, especially Florida residents, with hurricane preparation. </p>
     </section>
     
    <div class="feature-section" data-aos="fade-up">
@@ -281,9 +292,10 @@
       -->
     </section>
 
-    <section data-aos="fade-up">
+    <section class="links" data-aos="fade-up">
       <!-- TODO: Add any relevant links -->
       <h2>Links</h2>
+      <br>
       <p>
         <a href="https://github.com/Mrferny123/Hurricane-Helper">GitHub</a> &bull;
         <a href="https://github.com/Mrferny123/Hurricane-Helper/releases/tag/v1.0.0">Live App</a>
