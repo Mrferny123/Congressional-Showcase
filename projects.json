@@ -13,5 +13,20 @@
     "district": "IA-03",
     "state": "IA",
     "tags": ["veterans", "education", "community"]
+  },
+  {
+    "slug": "FL-09",
+    "name": "Nissi Sanju",
+    "appName": "Hurricane Helper",
+    "description": "A guide for hurricane prepardness",
+    "thumbnail": "sites/FL-00/thumbnail.png",
+    "location": {
+      "lat": 28.291956,
+      "lng": -81.407570,
+      "label": "Kissimmee, FL"
+    },
+    "district": "FL-09",
+    "state": "FL",
+    "tags": ["environment", "ai"]
   }
 ]
