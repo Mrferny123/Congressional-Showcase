@@ -1,5 +1,8 @@
 # Congressional App Challenge Showcase
 
+I made this website from the template that hack club provided but changed most of it with my own code. This project was made using html, css, and a tiny bit of js. In this project, I learned a lot about web dev which is a weaker area for me. One challenge I had was determining how to make the website look nice and to translate my ideas in my head to code.
+
+
 A showcase of apps built by high schoolers for the [Congressional App Challenge](https://www.congressionalappchallenge.us/), powered by [Hack Club](https://hackclub.com).
 
 Each participant gets their own page to show off who they are, what they built, and a demo of their app. All pages are connected through a landing page with an interactive map.
